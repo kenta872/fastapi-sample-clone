@@ -24,7 +24,7 @@ jobs:
         with:
           registory: ${{ env.REGISTORY }}
           username: ${{ github.actor }}
-          password: ${{ secrets.DOCKER_PASSWORD }}
+          password: ${{ secrets.GITHUB_TOKEN }}
       
       - name: build and push
         uses: docker/build-push-action@v5
