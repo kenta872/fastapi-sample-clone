@@ -24,7 +24,7 @@ jobs:
         with:
           registry: ${{ env.REGISTORY }}
           username: ${{ github.actor }}
-          password: ${{ secrets.DOCKER_PASSWORD }}
+          password: ${{ secrets.GITHUB_TOKEN }}
       
       - name: build and push
         uses: docker/build-push-action@v6
@@ -34,4 +34,4 @@ jobs:
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
           secrets: |
-            GIT_AUTH_TOKEN=${{ secrets.PAT }}
+            GIT_AUTH_TOKEN=${{ secrets.GITHUB_TOKEN }}
