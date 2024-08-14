@@ -1,0 +1,17 @@
+{
+  "name": "@kenta872/fastapi-sample-clone",
+  "version": "1.0.0",
+  "description": "FastAPI sample app",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@kenta872/fastapi-sample-clone": "file:"
+  }
+}
