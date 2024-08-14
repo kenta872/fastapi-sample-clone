@@ -17,12 +17,12 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: ${{env.REGISTORY}}/${{ github.repository }}/fastapi-sample
+          images: ${{ env.REGISTORY }}/${{ github.repository }}/fastapi-sample
 
       - name: Login to github Container Registory
         uses: docker/login-action@v3
         with:
-          registory: ${{env.REGISTORY}}
+          registory: ${{ env.REGISTORY }}
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
       
