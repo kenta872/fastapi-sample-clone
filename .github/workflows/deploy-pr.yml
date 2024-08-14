@@ -34,4 +34,4 @@ jobs:
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
           secrets: |
-            GIT_AUTH_TOKEN=${{ secrets.GIT_HUB_ACCESS_TOKEN }}
+            GIT_AUTH_TOKEN=${{ secrets.GITHUB_TOKEN }}
