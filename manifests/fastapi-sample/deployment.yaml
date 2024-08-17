@@ -4,7 +4,7 @@ metadata:
   creationTimestamp: null
   labels:
     app: sample-app
-  name: sample-app
+  name: sample-app-deployment
 spec:
   replicas: 1
   selector:
@@ -22,8 +22,8 @@ spec:
           name: fastapi-sample
           envFrom:
             - configMapRef:
-                name: sample-app
+                name: sample-app-configmap
             - secretRef:
-                name: sample-app
+                name: sample-app-secret
           resources: {}
 status: {}

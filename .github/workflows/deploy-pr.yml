@@ -1,5 +1,8 @@
 name: deploy-pr
 on:
+  push:
+    branches: 
+      - main
   pull_request:
     paths:
       - 'app/**'
@@ -19,7 +22,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: ${{ env.REGISTORY }}/${{ github.repository }}/fastapi-sample
+          images: ${{ env.REGISTORY }}/${{ github.repository }}/fastapi-sample-clone
 
       - name: Login to github Container Registory
         uses: docker/login-action@v3
