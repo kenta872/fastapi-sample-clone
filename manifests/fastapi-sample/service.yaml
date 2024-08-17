@@ -4,7 +4,7 @@ metadata:
   creationTimestamp: null
   labels:
     app: sample-app
-  name: sample-app
+  name: sample-app-service
 spec:
   ports:
   - name: "80"
